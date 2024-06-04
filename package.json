@@ -6,5 +6,18 @@
     "nodes": {
       "displayimage": "mcu_displayimage.js"
     }
-  }
+  },
+  "keywords": [
+    "node-red",
+    "node-red-mcu",
+    "moddable",
+    "display",
+    "image"
+  ],
+  "author": "@kitazaki",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/kitazaki/node-red-contrib-mcu-display-image/issues"
+  },
+  "homepage": "https://github.com/kitazaki/node-red-contrib-mcu-display-image#readme"
 }
