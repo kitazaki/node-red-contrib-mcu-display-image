@@ -1,0 +1,22 @@
+{
+        "include": [
+                "$(MODDABLE)/examples/manifest_base.json",
+                "$(MODDABLE)/examples/manifest_commodetto.json"
+        ],
+	"modules": {
+		"*": [
+                    "./displayjpeg",
+                    "./displaypng",
+                    "$(COMMODETTO)/miniz"
+                ],
+                "commodetto/readJPEG": "$(COMMODETTO)/commodettoReadJPEG",
+                "commodetto/readPNG": "$(COMMODETTO)/commodettoReadPNG",
+                "commodetto/BufferOut": "$(COMMODETTO)/commodettoBufferOut",
+                "commodetto/Convert": "$(COMMODETTO)/commodettoConvert",
+                "commodetto/PixelsOut": "$(COMMODETTO)/commodettoPixelsOut"
+	},
+	"preload": [
+                "displayjpeg",
+                "displaypng"
+        ]
+}

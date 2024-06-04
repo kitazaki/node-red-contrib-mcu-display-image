@@ -1,0 +1,10 @@
+{
+  "name": "@kitazaki/node-red-contrib-mcu-display-image",
+  "version": "0.0.1",
+  "description": "display JPEG/PNG with Node-RED MCU",
+  "node-red": {
+    "nodes": {
+      "displayimage": "mcu_displayimage.js"
+    }
+  }
+}
