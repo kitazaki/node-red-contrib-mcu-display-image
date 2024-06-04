@@ -4,7 +4,7 @@ Node to display JPEG/PNG with Node-RED MCU
 
 ## Overview
 
-![palette](./image/palette.jpg)
+![palette](./image/palette.png)
 
 ## How to use
 
@@ -24,9 +24,9 @@ npm install <folder_path>
 
 ## Node-RED flow
 
-![flow](./image/flow.jpg)
+![flow](./image/flow.png)
 
 ## Sample test
 
-![sample](./image/sample.jpg)
+![sample](./image/sample.png)
 
