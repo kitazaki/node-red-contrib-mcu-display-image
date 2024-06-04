@@ -4,6 +4,8 @@ Node to display JPEG/PNG with Node-RED MCU
 
 ## Overview
 
+There are two nodes, mcu_displayjpeg and mcu_displaypng.  
+
 ![palette](./image/palette.png)
 
 ## How to use
@@ -24,9 +26,13 @@ npm install <folder_path>
 
 ## Node-RED flow
 
+Node-RED flow  
+
 ![flow](./image/flow.png)
 
 ## Sample test
+
+Sample test on simulator  
 
 ![sample](./image/sample.png)
 
