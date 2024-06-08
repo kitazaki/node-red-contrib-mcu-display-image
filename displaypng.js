@@ -4,10 +4,14 @@ import Poco from "commodetto/Poco";
 import Bitmap from "commodetto/Bitmap";
 import Convert from "commodetto/Convert";
 import config from "mc/config";
+let xoffset, yoffset;
 
 class DisplayPng extends Node {
     onStart(config) {
         super.onStart(config);
+        xoffset = Number(config.xoffset);
+        yoffset = Number(config.yoffset);
+        //console.log("xoffset,yoffset:"+xoffset+","+yoffset);
     };
     onMessage(msg, done) {
         let poco = new Poco(screen);
@@ -41,8 +45,8 @@ class DisplayPng extends Node {
 
                 reverse?.reverse();
 
-                poco.begin(0, y, width, 1);
-                poco.drawBitmap(bits, 0, y);
+                poco.begin(0 + xoffset, y + yoffset, width, 1);
+                poco.drawBitmap(bits, 0 + xoffset, y + yoffset);
                 poco.end();
         }
         done();
