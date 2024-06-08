@@ -1,11 +1,15 @@
 {
   "name": "@kitazaki/node-red-contrib-mcu-display-image",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "display JPEG/PNG with Node-RED MCU",
   "node-red": {
+    "version": ">=3.0.0",
     "nodes": {
       "displayimage": "mcu_displayimage.js"
     }
+  },
+  "engines": {
+    "node": ">=16.0.0"
   },
   "keywords": [
     "node-red",
