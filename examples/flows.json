@@ -1,0 +1,329 @@
+[
+    {
+        "id": "d24542546ad998e2",
+        "type": "tab",
+        "label": "フロー 1",
+        "disabled": false,
+        "info": "",
+        "env": [],
+        "_mcu": {
+            "mcu": true
+        }
+    },
+    {
+        "id": "637baddda2d5f6e5",
+        "type": "inject",
+        "z": "d24542546ad998e2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 120,
+        "y": 60,
+        "wires": [
+            [
+                "f06bd2ca1a1e96b9"
+            ]
+        ]
+    },
+    {
+        "id": "d9e0297bce93ad77",
+        "type": "debug",
+        "z": "d24542546ad998e2",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 380,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "f06bd2ca1a1e96b9",
+        "type": "http request",
+        "z": "d24542546ad998e2",
+        "name": "jpeg1",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "http://zakkiea.html.xdomain.jp/example1.jpg",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 170,
+        "y": 100,
+        "wires": [
+            [
+                "d9e0297bce93ad77",
+                "2be2fbb94501cd7e"
+            ]
+        ]
+    },
+    {
+        "id": "56a465f73b3927e4",
+        "type": "http request",
+        "z": "d24542546ad998e2",
+        "name": "jpeg2",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "http://zakkiea.html.xdomain.jp/example2.jpg",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 170,
+        "y": 180,
+        "wires": [
+            [
+                "d9e0297bce93ad77",
+                "2be2fbb94501cd7e"
+            ]
+        ]
+    },
+    {
+        "id": "cfcc7e89b7da84c5",
+        "type": "inject",
+        "z": "d24542546ad998e2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 120,
+        "y": 140,
+        "wires": [
+            [
+                "56a465f73b3927e4"
+            ]
+        ]
+    },
+    {
+        "id": "2be2fbb94501cd7e",
+        "type": "mcu_displayjpeg",
+        "z": "d24542546ad998e2",
+        "name": "",
+        "xoffset": "10",
+        "yoffset": "50",
+        "moddable_manifest": {
+            "include": "manifest.json"
+        },
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 410,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8149e6b68a600097",
+        "type": "http request",
+        "z": "d24542546ad998e2",
+        "name": "png3",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "http://zakkiea.html.xdomain.jp/example3.png",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 170,
+        "y": 300,
+        "wires": [
+            [
+                "72f9fb123a05649e",
+                "225ce82d259160b1"
+            ]
+        ]
+    },
+    {
+        "id": "290edefe97879cac",
+        "type": "http request",
+        "z": "d24542546ad998e2",
+        "name": "png4",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "http://zakkiea.html.xdomain.jp/example4.png",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 170,
+        "y": 380,
+        "wires": [
+            [
+                "72f9fb123a05649e",
+                "225ce82d259160b1"
+            ]
+        ]
+    },
+    {
+        "id": "e4921aadd70bd49e",
+        "type": "inject",
+        "z": "d24542546ad998e2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 120,
+        "y": 260,
+        "wires": [
+            [
+                "8149e6b68a600097"
+            ]
+        ]
+    },
+    {
+        "id": "4153271a91096257",
+        "type": "inject",
+        "z": "d24542546ad998e2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 120,
+        "y": 340,
+        "wires": [
+            [
+                "290edefe97879cac"
+            ]
+        ]
+    },
+    {
+        "id": "72f9fb123a05649e",
+        "type": "debug",
+        "z": "d24542546ad998e2",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 380,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "225ce82d259160b1",
+        "type": "mcu_displaypng",
+        "z": "d24542546ad998e2",
+        "name": "",
+        "xoffset": "10",
+        "yoffset": "50",
+        "moddable_manifest": {
+            "include": "manifest.json"
+        },
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 400,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    }
+]
